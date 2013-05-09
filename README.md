@@ -13,15 +13,16 @@ $ git clone --depth 1 git://github.com/Ph3nx/rTorrent.git
 Improve the config:
 
 ```bash
-$ cd ./rTorrent
+$ cd rTorrent
 $ nano .rtorrent.rc
 ```
 
 Create new app and add some config vars:
 
 ```bash
-heroku create --buildpack https://github.com/Ph3nx/heroku-null-buildpack.git
+heroku create --buildpack https://github.com/Ph3nx/heroku-binary-buildpack.git
 heroku config:set LD_LIBRARY_PATH=./lib
+heroku config:set PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/app/bin
 ```
 
 Push to your server:
@@ -36,7 +37,7 @@ Run it in the background:
 
 ```bash
 $ screen -s t1 heroku run bash -a APP
-$ ./t
+$ t
 $ cd dl
 $ ~/ftp -inv IP
 ```
