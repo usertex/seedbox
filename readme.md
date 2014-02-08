@@ -42,7 +42,9 @@ $ cd dl
 $ ~/ftp -inv IP
 ```
 
-FTP the files:
+## Upload files to different server
+
+FTP
 
 ```bash
 ftp user@server-ip
@@ -54,11 +56,18 @@ ftp> get FILE
 ftp> bye
 ```
 
-SCP the files:
+SCP
 
 ```bash
 $ scp FILE USER@IP:/PATSH
 ```
+
+CURL FTP upload
+
+```bash
+curl -T file ftp://server-ip --user username:password
+```
+
 
 ## Issues
 
