@@ -20,9 +20,9 @@ $ vi .rtorrent.rc
 Create new app and add some config vars:
 
 ```bash
-heroku create --buildpack https://github.com/ph3nx/heroku-binary-buildpack.git
-heroku config:set LD_LIBRARY_PATH=./lib
-heroku config:set PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/app/bin
+$ heroku create --buildpack https://github.com/ph3nx/heroku-binary-buildpack.git
+$ heroku config:set LD_LIBRARY_PATH=./lib
+$ heroku config:set PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/app/bin
 ```
 
 Push to your server:
@@ -42,12 +42,21 @@ $ cd dl
 $ ~/ftp -inv IP
 ```
 
+## Usage
+
+Run with `$ t` then press enter and paste a magnet link.
+Select the torrent with arrow keys.
+Press CTRL+S to start the download.
+To view the files press right arrow key. Change their priority with space.
+When the download is finished press CTRL+Q to quit rTorrent.
+
+
 ## Upload files to different server
 
 FTP
 
 ```bash
-ftp user@server-ip
+$ ftp user@server-ip
 ftp> user USER PW
 ftp> passive
 ftp> cd /
@@ -71,7 +80,7 @@ curl -T file ftp://server-ip --user username:password
 
 ## Issues
 
-If STRG+S is not working add these lines to the .profile of your user
+If CTRL+S is not working add these lines to the .profile of your user
 
 ```bash
 $ nano ~/.profile
