@@ -45,6 +45,7 @@ $ ~/ftp -inv IP
 FTP the files:
 
 ```bash
+ftp user@server-ip
 ftp> user USER PW
 ftp> passive
 ftp> cd /
