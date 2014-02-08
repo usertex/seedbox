@@ -7,20 +7,20 @@ Compiled on Ubuntu 11.04.
 Clone this repo:
 
 ```bash
-$ git clone --depth 1 git://github.com/Ph3nx/rTorrent.git
+$ git clone --depth 1 git://github.com/ph3nx/rTorrent.git
 ```
 
 Improve the config:
 
 ```bash
 $ cd rTorrent
-$ nano .rtorrent.rc
+$ vi .rtorrent.rc
 ```
 
 Create new app and add some config vars:
 
 ```bash
-heroku create --buildpack https://github.com/Ph3nx/heroku-binary-buildpack.git
+heroku create --buildpack https://github.com/ph3nx/heroku-binary-buildpack.git
 heroku config:set LD_LIBRARY_PATH=./lib
 heroku config:set PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/app/bin
 ```
@@ -30,7 +30,7 @@ Push to your server:
 ```bash
 $ git add -A
 $ git commit -m "improved config"
-$ git push heroku master
+$ git push -u heroku master
 ```
 
 Run it in the background:
